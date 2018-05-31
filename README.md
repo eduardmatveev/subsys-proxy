@@ -20,18 +20,21 @@ creator proxy dst cmd [options]
 ./creator.exe ./proxy.exe ./tartest.exe "/c/Windows/System32/bash.exe -c 'cd #PWD# && exec /bin/tar #ARGS#'" -i -f "\\" "/" -f "/c/" "/mnt/c/" -f "C:" "/mnt/c" -l ./log.txt
 на выходе получается tartest.exe который работает так же как /bin/tar в WSL
 
-Windows:
+For Windows:
 Install MSYS2x86_64
 From http://repo.msys2.org/distrib/x86_64/
 Add to Path environment [msys64_dir]\usr\bin
 From cmd
 pacman -S msys/cmake msys/make msys/gcc
 
-Build
-From current directory
+For MacOSX:
+brew install cmake
+brew install g++
+
+Build:
 sh build.sh
 
-Палны:
+Планы:
 -Под Windows избавиться от msys (собрать через MSVC)
 -Разобраться с кодировкой
 -Разобраться с tty
