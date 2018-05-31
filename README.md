@@ -21,6 +21,9 @@ creator.exe - программа для создания исполняемог�
 ./creator.exe ./proxy.exe ./tartest.exe "/c/Windows/System32/bash.exe -c 'cd #PWD# && exec /bin/tar #ARGS#'" -i -f "\\" "/" -f "/c/" "/mnt/c/" -f "C:" "/mnt/c" -l ./log.txt
 ```
 на выходе получается tartest.exe который работает так же как /bin/tar в WSL<br><br>
+Placeholders:<br>
+#PWD# - working directory<br>
+#ARGS# - arguments<br><br>
 
 ## Build:<br>
 ### For Windows:
