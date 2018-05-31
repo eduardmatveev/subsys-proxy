@@ -13,6 +13,9 @@ creator.exe - программа для создания исполняемог�
 -l <log-file>
 -f <replace-from-host replacement-from-host>
 -t <replace-to-host replacement-to-host>
+Placeholders:<br>
+#PWD# - working directory<br>
+#ARGS# - arguments<br><br>
 ```
 
 ## Пример:
@@ -20,18 +23,13 @@ creator.exe - программа для создания исполняемог�
 ./creator.exe ./proxy.exe ./tartest.exe "/c/Windows/System32/bash.exe -c 'cd #PWD# && exec /bin/tar #ARGS#'" -i -f "\\" "/" -f "/c/" "/mnt/c/" -f "C:" "/mnt/c" -l ./log.txt
 ```
 на выходе получается tartest.exe который работает так же как /bin/tar в WSL<br><br>
-Placeholders:<br>
-#PWD# - working directory<br>
-#ARGS# - arguments<br><br>
 
 ## Build:<br>
 ### For Windows:
-Install MSYS2x86_64<br>
-From http://repo.msys2.org/distrib/x86_64/<br>
-Add to Path environment [msys64_dir]\usr\bin<br>
-From cmd<br>
-```pacman -S msys/cmake msys/make msys/gcc```<br>
-```sh build.sh```
+Install MSYS2x86_64 http://repo.msys2.org/distrib/x86_64/<br>
+Add to Path environment variable [msys64_dir]\usr\bin<br>
+Install utils ```pacman -S msys/cmake msys/make msys/gcc```<br>
+Build ```sh build.sh```<br>
 
 ### For MacOSX:
 ```
