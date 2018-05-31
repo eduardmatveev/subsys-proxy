@@ -42,5 +42,3 @@ mkdir -p $PWD/usr/bin
     -f "/c/" "/mnt/c/" \
     -f "C:" "/mnt/c" \
     -t "/mnt/c" "C:" #-l $PWD/log.txt
-    
-chmod +x "$PWD/usr/bin/cmake.exe"
