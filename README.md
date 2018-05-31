@@ -28,12 +28,15 @@ Install MSYS2x86_64<br>
 From http://repo.msys2.org/distrib/x86_64/<br>
 Add to Path environment [msys64_dir]\usr\bin<br>
 From cmd<br>
-pacman -S msys/cmake msys/make msys/gcc<br><br>
+```pacman -S msys/cmake msys/make msys/gcc```<br>
+```sh build.sh```
 
 ### For MacOSX:
-brew install cmake<br>
-brew install g++<br><br>
-sh build.sh<br>
+```
+brew install cmake
+brew install g++
+sh build.sh
+```
 
 ## Планы:
 -Под Windows избавиться от msys (собрать через MSVC)<br>
