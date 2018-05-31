@@ -19,7 +19,6 @@ void write_string(std::vector<uint8_t> &buffer, const std::string &value)
 
 int main(int argc, char *argv[])
 {
-    auto quiet = false;
     if (argc < 4)
     {
         std::cout << "Usage" << std::endl;
@@ -45,6 +44,7 @@ int main(int argc, char *argv[])
     std::vector<std::pair<std::string, std::string>> tohost;
     std::vector<std::pair<std::string, std::string>> fromhost;
     uint16_t input = 0;
+    auto quiet = false;
     for (int i = 4; i < argc; ++i)
     {
         std::string cmd = argv[i];
