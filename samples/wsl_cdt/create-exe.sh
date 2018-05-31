@@ -1,8 +1,6 @@
 #!/bin/sh
 set -ex
 
-echo $LOCALAPPDATA
-
 mkdir -p $PWD/usr/bin
 ../../bin/creator ../../bin/proxy $PWD/usr/bin/cmake.exe \
     "/c/Windows/System32/bash.exe -c \"cd #PWD# && exec /usr/bin/cmake #ARGS#\"" -q -i \
