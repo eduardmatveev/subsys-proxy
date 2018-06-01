@@ -7,15 +7,14 @@ proxy.exe - программа проксирования вывода/ввод�
 creator.exe - программа для создания исполняемого файла и записи параметров в конец файла<br>
 
 ```
-./creator.exe ./proxy.exe dst cmd [options]
+./creator.exe ./proxy.exe [dst] [cmd] [options]
+[dst] - output exe
+[cmd] - command execute from host, #PWD# and #ARGS# placeholders
 -q - quiet
 -i - use input replace
 -l <log-file>
 -f <replace-from-host replacement-from-host>
 -t <replace-to-host replacement-to-host>
-Placeholders:<br>
-#PWD# - working directory<br>
-#ARGS# - arguments<br><br>
 ```
 
 ## Пример:
